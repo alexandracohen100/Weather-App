@@ -12,6 +12,7 @@
       crossorigin="anonymous"/>
      <link rel="stylesheet" href="style.css" />
   </head>
+<div class="full-weather-app">
   <div class="weather-app">
   <body>
    <form id="text-box" class="search-box">
@@ -33,12 +34,15 @@
     <li>Clear</li>
     <div class="row">
       <div class="col-6">
+        <div class="temperature-value">
         <img
           src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-          alt="Clear"
+          alt="Cloudy"
         />
-12°C / °F
-      </div>
+<strong>12</strong> 
+<span class="units">°C / <a href ="#">°F</a></span>
+</div>      
+</div>
       <div class="col-6">
          <li>Precipitation: 0%</li>
        <li>Humidity: 50%</li>
@@ -46,7 +50,11 @@
       </ul>
   <div class="container"></div>
     <script src="Index.js"></script>
-    <small><a href="https://github.com/alexandracohen100/Weather-App">Open source code</a> by Alexandra Cohen </small>
+  
     </div>
 </body>
-</html>
+  <small>
+    <a href="https://github.com/alexandracohen100/Weather-App">Open source code</a> by Alexandra Cohen </small>
+    </div>
+    </html>
+
