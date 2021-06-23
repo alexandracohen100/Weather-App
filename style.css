@@ -1,10 +1,36 @@
 h1 {
-  padding: 20px;
+  padding: 0px;
+  color: #878787;
+  font-size: 24px;
 }
 .weather-app {
-  width: 800px;
-  border: 2px solid grey;
+  max-width: 600px;
+  border: 1px solid #dadde1;
   border-radius: 10px;
   margin: 20px;
   padding: 20px;
+  margin: 30px auto;
+}
+
+.search-box {
+  padding: 40px;
+  margin: 40p;
+  width: 300px;
+}
+.button {
+  color: black;
+  background: white;
+  align: right;
+  border-radius: 5px;
+  margin: 10px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
