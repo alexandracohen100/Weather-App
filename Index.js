@@ -24,16 +24,22 @@ function formatDate(timestamp) {
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
-  temperatureElement.innerHTML = math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
-  let humidityElement = document.querySelector("humidity");
+  let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
-  let windElement = document.querySelector("wind");
-  windElement.innerHTML = math.round(response.data.wind.speed);
-  let dateElement = document.querySelector("date");
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("icon");
+  iconElement.setAttribute(
+    "src",
+    `http://www.openweathermap.org/img/wn/${response.data.weather[0].icon@2x.png`
+  );
+  iconElement.setAttribute("alt",response.data.weather[0].description);
 }
 
 let apiKey = "c83f0b36646f8f213130092c5eb7cca0";
