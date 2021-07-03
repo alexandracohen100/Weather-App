@@ -28,15 +28,21 @@ id="city-input"
 autocomplete="off"/>
         </div>
         <div class="col-3">
-<input type="submit" value="Search" class="btn btn-primary w-100"/>
+<input type="submit"
+value="Search"
+class="btn btn-primary w-100"
+/>
     </div>
     </div>
     </form>
-<h1 id="city">New York</h1>
+  <div class="overview">
+    <h1 id="city">New York</h1>
 <ul>
   <li> Last updated: <span id="date"></span></li>
     <li id="description"></li>
-    <div class="row">
+   </ul>
+   </div> 
+   <div class="row">
       <div class="col-6">
         <div class="temperature-value">
         <img
@@ -45,36 +51,24 @@ autocomplete="off"/>
           id="icon";
         />
 <strong id="temperature"></strong> 
-<span class="units">°C / <a href ="#">°F</a></span>
+<span class="units"
+>°C / <a href ="#">°F</a></span>
 </div>      
 </div>
-      <div class="col-6">
-         <li>Humidity: <span id="humidity"></span>%</li>
+</div> 
+<div class="col-6">
+</ul>
+<li>Humidity: <span id="humidity"></span>%</li>
     <li> Wind: <span id="wind"></span> km/h</li>
    </ul>
- <div class="weather-forecast" id="forecast">
-   <div class="row">
-     <div class="col-2">
-       <div class="weather-forecast-date"></div>
-       Thurs
-      <img
-          src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-width="40"/>
-<div class="weather-forecast-temperature">
-<span class="weather-forecast-temperature-max">
-  18° </span>
-<span class="weather-forecast-temperature-min">
-  12° </span>
-</div>
-</div>
-      </div>
-  </div>
-</div>
-   <small>
+ </div>
+ </div>
+    <div class="weather-forecast" id="forecast"></div>
+        <small>
         <a href="https://github.com/alexandracohen100/Weather-App">Open source code</a> by Alexandra Cohen
       </small>
      </div>
       </div>
-   <script src="Index.js"></script>    
-   </body>  
-      </html>
+    <script src="Index.js"></script>
+    </body>
+    </html>
