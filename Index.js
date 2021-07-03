@@ -17,11 +17,12 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
+
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast(response) {
+function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun"];
@@ -45,12 +46,6 @@ function displayForecast(response) {
       </div>
   `;
   });
-
-  function getForecast(coordinates) {
-    let apiKey = "c83f0b36646f8f213130092c5eb7cca0";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid={API key}&units=metric`;
-    axios.get(apiUrl).then(displayForcast);
-  }
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
