@@ -22,21 +22,22 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun"];
 
   let forecastHTML = `<div class="row">`;
   days.forEach(function (day) {
-    forecastHTML = forecastHTML +
+    forecastHTML =
+      forecastHTML +
       `
       <div class="col-2">
         <div class="weather-forecast-date">${day}</div>
         <img
           src="http://openweathermap.org/img/wn/50d@2x.png"
           alt=""
-          width="42"
+          width="40"
         />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max"> 18° </span>
@@ -85,7 +86,7 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-search("New York");
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+search("New York");
